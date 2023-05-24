@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ego</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../../assets/img/favicon.png" rel="icon">
+  <link href="../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.9.2
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="thumb.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture3.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Ego</h3>
+              <p>Ego is a project that is meant to explore the idea of human perception, in particular the idea of identity and self consciousness and the way it is distorted and biased..</p>
+              <ul>
+                <li><strong>A.A. Year</strong>: 2022-23
+                <li><strong>Students</strong>
+                  <p>Matteo Pettenò<br>
+                  Sebastian Gafencu<br>
+                  Samuele Del Moro<br>
+                  Tommaso Gambini</p>
+                <li><strong>Source code</strong>: <a href="https://github.com/mpetteno-polimi/CPAC-Ego">Github</a></li>
+                <li><strong>Web app</strong>: <a href="https://mpetteno-polimi.github.io/CPAC-Ego">link</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <h3>Description</h3>
+              <p>We implemented this project as a webapp to make the experience available to
+everyone, but it can also be imagined in the context of an artistic installation: the user's first
+approach would be defined by the vision of a cloud of swirling particles, while an undefined
+drone sound is playing. Once the user is close enough to be detected by our system the
+cloud will start to slowly morph into a shape resembling its face: the user is now witnessing
+their identity take shape. A repeating melody would be heard, whose generation is based on
+the user's face, in particular on their somatic traits and their current mood. The intrigued user
+might now get even closer, in which case they'll hear the music become more and more
+intense, in a higher pitch and faster, representing an ever-growing feedback loop of self
+consciousness. The final phase of Ego will show the user their face being morphed into a
+new shape, reminiscent of a Rorschach Test, to finally express the idea of the distortion of
+the self caused by the filtering of external point of view.</p>
+
+              <br><h3>Challenges, accomplishment and lessons learned </h3>
+              <p>Multiple challenges came from
+working on different computers/OS. We had some compatibility issues with Max and some
+external plugins. Also working with different machines meant we had to find optimal
+parameters, as a compromise between quality and performance. Initially, communication
+between browser and external tools was also a problem but we managed to overcome it by
+implementing a bridge between WebSocket and UDP. Another challenge was to automate
+graphical parameters and at the same time guarantee a fluid experience. In the end we think
+we achieved good results in implementing a quite complicated particle system.</p>
+
+              <br><h3>Technology</h3>
+              <p><ul>
+                  <li>WebApp Framework: Svelte
+                  <li>Programming languages: TypeScript + GLSL
+                  <li>Rendering: Three.js
+                  <li>Face detection: MediaPipe Face Mesh Javascript Solution
+                  <li>Expression recognition: face-api.js
+                  <li>Sound design: Max 8, Tone.js
+                  <li>OSC: osc-js
+                  <li>Utilities: lygia, gsap, three-msdf-text-utils
+                  <li>Others: GPU Computation, Processing
+                  <li>CI/CD: GitHub Workflows
+                  <li>Hosting: GitHub Pages</p>
+                </ul>
+
+              <br><h3>Students</h3>
+              <p>Matteo Pettenò:</p>
+              <ul>
+                <li>Application core development
+                <li>Three.js development
+                <li>Shader and GPU computation
+                <li>Parameters automation
+                <li>Face and expression detection
+                <li>Face triangulation
+                <li>OSC communication
+                <li>Application architecture
+                <li>Repository administrator
+              </ul>
+              <p>Sebastian Gafencu:</p>
+              <ul>
+                <li>Music generation
+                <li>Perlin noise shape generation algorithm
+                <li>Parameters automation
+                <li>Video editing
+              </ul>
+              <p>Samuele Del Moro:</p>
+              <ul>
+                <li>Patch Max 8
+              </ul>
+              <p>Tommaso Gambini:</p>
+              <ul>
+                <li>Physics-based shape generation algorithm
+                <li>Tone.js
+              </ul>
+
+              <br><h3>Quotes</h3>
+              <blockquote>
+              </blockquote>
+
+              <br><h3>Media</h3>
+              <style>.embed-container { clear:both; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+                     .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+              </style><div class='embed-container'><iframe width="560" height="315" src="https://www.youtube.com/embed/zK5xQAdvrfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../../assets/vendor/aos/aos.js"></script>
+  <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../../assets/js/main.js"></script>
+
+</body>
+
+</html>

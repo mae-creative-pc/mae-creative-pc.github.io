@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Oblivion</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../../assets/img/favicon.png" rel="icon">
+  <link href="../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.9.2
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="thumb.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture3.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>LyriFont</h3>
+              <p>Interactive visual generation from song lyrics.</p>
+              <ul>
+                <li><strong>A.A. Year</strong>: 2023-24
+                <li><strong>Students</strong>
+                  <p>Noemi Mauri<br>
+                  Matteo Gionfriddo<br>
+                  Riccardo Passoni<br>
+                  Alessandro Ferrando</p>
+                <li><strong>Source code</strong>: <a href="https://github.com/moeni27/LyriFont.git">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <h3>Description</h3>
+              LyriFont aims to create an edge between Music and Visual Arts by employing different advanced
+              technologies. The primary objective of LyriFont is to convey the distinctive mood and cultural
+              essence of various music genres through visually representative typography. By doing so, we aim to
+              deepen the user’s connection to the music and lyrics, making the experience more immersive and
+              engaging.<BR>
+              LyriFont is thinked as a potential feature for popular music streaming platforms such as
+              Spotify or Apple Music. However, its versatile capabilities also make it suitable for other applications,
+              such as interactive installations or visual displays for live concerts. LyriFont utilizes neural networks
+              to determine the music genre of an input song and then associates it with a font that best matches
+              the identified genre. Additionally, it generates an image based on the song’s lyrics, which is then
+              dynamically modified by a particle system to create an engaging and interactive visual experience.<br>
+              
+              <br><h3>Challenges, accomplishment and lessons learned </h3>
+              <p>The project presented several challenges, particularly in its innovative nature, where the lack of
+              existing literature about the unique connection between fonts and music genres did not give us
+              a path to follow. The implementation of Neural Networks for genre recognition posed another
+              significant challenge, as we navigated through various possibilities in feature selection and network
+              architecture to find the most reliable solution. Despite these challenges, our collective effort led to
+              several accomplishments. We developed a functional system that matches fonts with music genres
+              based on song lyrics, showcasing our dedication and problem-solving skills. Working in a team
+              allowed us to pool our diverse skills and perspectives, facilitating the discovery of creative solutions.
+              Effective communication among team members played a crucial role in overcoming obstacles and
+              refining our ideas.</p>
+
+              <br><h3>Technology</h3>
+              <p>The two main technologies used in our project were Python and Processing, which communicate via
+                the OSC (Open Sound Control) protocol. In this setup, Python acts as the server, handling music
+                genre classification, while Processing serves as the client, managing the visual display.<br>
+
+                In Python, we implemented music genre classification using LSTM (Long Short-Term Mem-
+                ory) Neural Networks. This involved extracting and processing musical features, which were essential
+                for training the model. We leveraged the TensorFlow library to build and refine our machine learning model. Additionally, we utilized syncedlyrics to retrieve song lyrics, spaCy for keyword extraction,
+                and the Hugging Face API to generate images based on these keywords.<br>
+                Processing receives OSC messages from Python, containing fonts and lyrics, and renders
+                them with dynamic visual effects. These effects include blob generation, which is created using genetic
+                algorithms influenced by user interactions and music features. This setup allows for an engaging and
+                interactive visual representation of the lyrics in sync with the music genre.
+                </p>
+              </ul>
+              <br><h3>Students</h3>
+              <p><b>Noemi Mauri:</b> Image generation and keyword extraction, processing visual effects.</p>
+              <p><b>Matteo Gionfriddo:</b> Neural Networks implementation, features mapping with visual effects.</p>
+              <p><b>Riccardo Passoni:</b> Visual Effects with Genetic algorithms, user interaction, bug fixes.</p>
+              <p><b>Alessandro Ferrando:</b> Starting idea, Neural Network fixes, fonts.</p>
+
+              <br><h3>Media</h3>
+              <style>.embed-container { clear:both; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+                     .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+              </style><div class='embed-container'><iframe width="560" height="315" src="https://www.youtube.com/embed/JgLIEsxE-DM?si=a8konk-UFrXeyiG9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            
+            
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../../assets/vendor/aos/aos.js"></script>
+  <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../../assets/js/main.js"></script>
+
+</body>
+
+</html>

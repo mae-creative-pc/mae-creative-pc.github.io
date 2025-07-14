@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Oblivion</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../../assets/img/favicon.png" rel="icon">
+  <link href="../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.9.2
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="thumb.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture3.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>SonART</h3>
+              <p>Every sound tells a story. We make sure it’s seen.” Classify the sounds within a track and convert them into images synchronized with the audio.</p>
+              <ul>
+                <li><strong>A.A. Year</strong>: 2024-25
+                <li><strong>Students</strong>
+                  <p>Chiara Auriemma<br>
+                    Matteo Benzo<br>
+                    Anna Fusari
+                    <br>Diego Pini</p>
+                <li><strong>Source code</strong>: <a href="https://github.com/ChiaraAuriemma/SonART">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <h3>Description</h3>
+              <p></p>SonART is an application designed to help people with limited resources bring their
+              performances to life, enhancing them through an original technology.
+              The user can upload an audio track they intend to use during their performance, and SonART
+              will classify the sounds it contains and transform them into images that are always unique,
+              thanks to the generative AI. These visuals will appear on screen in sync with the sounds they
+              represent.
+              To make the experience even more visually engaging, a custom Processing script modifies the
+              images to give them a unique artistic flair.
+              The user experience is simplified through a built-in GUI within the notebook, guiding users
+              through the file upload and processing steps. The GUI also allows customization of certain
+              parameters to improve the final result.
+              While the application works also with musical tracks and instruments, it is primarily designed
+              to accompany theatrical performances, where environmental or narrative-driven sounds are
+              used. In this context, SonART generates dynamic visual backdrops.
+              This is one of the system’s key features, distinguishing it from other applications that are
+              mainly intended to accompany musical performances.
+              Although this was the original concept that inspired the project, SonART also lends itself to
+              more playful or educational purposes:
+              “Aren’t you curious to see how that track will be transformed?”
+              It can help children associate sounds with images in a fun way, enhance storytelling during a
+              Dungeons & Dragons session by preparing sounds and letting SonART handle the visuals, or
+              even make performances more inclusive for the hearing-impaired.
+              You can also use it during relaxation sessions, pairing nature sounds with beautiful, evolving
+              imagery.
+              In short, the only limit is your creativity.<p>
+
+              <br><h3>Challenges, accomplishment and lessons learned </h3>
+              <p><b>Challenges:</b><br>
+                The main challenges of this project were threefold:
+                Regarding audio, the accuracy of publicly available audio classifiers, while generally high,
+                never reaches 100%. In particular, the models often struggle to distinguish between similar
+                types of sounds, and the labels found in training datasets are sometimes too generic,
+                sometimes ambiguous, or even overly specific.
+                As for image generation, one of the main difficulties was minimizing the time required to
+                generate images as much as possible.
+                Finally, in terms of visualization, synchronizing audio and video, while also managing smooth
+                transitions between images, proved to be a non-trivial task.<br>
+                <b>Accomplishments:</b><br>
+                We aimed to make the system as robust as possible, balancing responsiveness with the
+                accuracy of the classifier's labels. This involved managing the segmentation size of the audio
+                clip and setting a minimum probability threshold that a class must exceed to be considered
+                valid.
+                We also minimized image generation wait times and are quite proud of the final visual design
+                used to display the images on screen.<br>
+                <b>Lessons Learned:</b><br>
+                Throughout the project, we learned to work with pre-trained neural networks and to
+                understand both their limitations and their potential. We identified the features that mattered
+                most to our goals and, by refining the input and the output processing, we sought an optimal
+                trade-off tailored to the needs of our application.
+              </p>
+  
+
+              <br><h3>Technology</h3>
+              <p><ul>
+                - Diffusion-based text-to-image generative model
+                - Convolutional neural network for Audio tagging
+                - Processing
+                - Python
+                - Tcp connection
+                - Json
+                - Ngrok
+                - Torch
+                - Socket
+                - Numpy
+                - Librosa
+                - Minim
+                - Google colab
+              </ul>
+              <br><h3>Students</h3>
+              <p><b>Chiara Auriemma:</b>She worked on the audio classification part and on the synhronization between audio and images on the Python side.</p>
+              <p><b>Matteo Benzo:</b> He worked on the image generation part and on creating audio tracks for testing and for the final presentation.</p>
+              <p><b>Diego Pini:</b> He worked on the image generation part and on the GUI integrated in notebook.</p>
+              <p><b>Anna Fusari:</b> She worked on the visualization part in Processing and managed synchronization between audio and images on the Processing side.</p>
+              <p><b>Diego Pini:</b> He worked on the image generation part and on the GUI integrated in notebook.</p>
+
+              <br><h3>Quotes</h3>
+              <blockquote>
+                <p>This is a quote</p>
+              </blockquote>
+
+              <br><h3>Media</h3>
+              <style>.embed-container { clear:both; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+                     .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+              </style><div class='embed-container'><iframe width="560" height="315" src="https://www.youtube.com/embed/6E68zmUDWVQ?si=HdklEJnMQiQ7Tpn8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../../assets/vendor/aos/aos.js"></script>
+  <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../../assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Cathartic</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../../assets/img/favicon.png" rel="icon">
+  <link href="../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.9.2
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="thumb.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture3.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Cathartic</h3>
+              <p>An interactive audiovisual installation where what you feel becomes what you hear and see.</p>
+              <ul>
+                <li><strong>A.A. Year</strong>: 2025-26
+                <li><strong>Students</strong>
+                  <p> Luca Trapella<br>
+                  Anna Impembo<br>
+                  Giorgio Mattina<br>
+                  Francesco Saverio Nisoli </p>
+                <li><strong>Source code</strong>: <a href="https://github.com/Gio-lly/Cathartic---CPAC-Final-Project.git">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <h3>Description</h3>
+              <p>Cathartic is an interactive audiovisual installation exploring how artificial intelligence can
+              support a personal and non-judgmental moment of emotional reflection.
+              The project invites visitors to express something they are carrying inside: a feeling, a
+              thought, a concern, or a secret. Rather than answering through language or attempting to
+              interpret the visitor’s experience, the system transforms the submitted text into an evolving
+              audiovisual environment.
+              Cathartic is envisioned as an intimate, capsule-like installation in which the visitor can
+              temporarily step away from the surrounding environment and focus on the generated
+              experience. The experience begins with a short disclaimer explaining the temporary and
+              private nature of the interaction. The visitor is then invited to type a message. Once
+              submitted, the text is processed in real time by an emotion-detection model that produces a
+              continuous, multi-emotion representation rather than assigning the message to a single
+              emotional category.
+              The detected emotions influence a real-time generative music model by controlling a
+              combination of weighted textual and audio prompts. At the same time, they define the
+              general colour palette and visual character of a responsive particle system inspired by
+              Chladni resonance patterns.
+              The generated music is analysed through amplitude tracking, frequency analysis, and
+              transient detection. These audio features control the immediate motion of the particles,
+              including their expansion, rotation, vibration, and reorganisation. A moving Perlin-noise field
+              distributes the colours associated with the dominant emotions across the visual space.
+              The visitor’s original text is also rasterised and used to define the initial particle distribution.
+              The written message therefore becomes the starting shape of the visualisation before
+              gradually dissolving into sound, colour, and movement.
+              The submitted text is processed only for the duration of the interaction and is not
+              intentionally stored in a file, database, or user profile. At the end of the audiovisual
+              sequence, the system displays a closing message and resets itself for the next visitor.</p>
+              <br>
+              <h3>Challenges, accomplishment and lessons learned </h3>
+              <h4>Challenges</h4>
+                <p>One of the main challenges was integrating several environments into a single real-time
+                system. The final pipeline connects a local Processing application, a local Python
+                emotion-detection system, a remote GPU running Magenta RT, a browser-based audio
+                player, and a virtual audio-routing system.
+                Another significant challenge was managing the computational requirements of real-time
+                music generation. The version of Magenta RT used in the project requires an A100-class
+                GPU to generate audio continuously, making it necessary to host the model remotely while
+                maintaining sufficiently responsive communication with the local installation.
+                We also had to determine how to translate emotional information into music and visuals
+                without reducing each text to one rigid category or relying only on arbitrary emotion–colour
+                associations.
+                On the visual side, we needed to balance responsiveness and stability. The particle system
+                had to react clearly to the generated sound while remaining visually coherent,
+                computationally sustainable, and consistent with the ambient and acousmatic character of
+                the music.</p>
+
+              <h4>Accomplishments</h4>
+                <p>One of our main accomplishments was identifying and integrating an emotion-detection
+                model that was both lightweight enough for real-time interaction and capable of representing
+                the complexity of the visitor’s text through multiple simultaneous emotional values.
+                We also succeeded in adapting a real-time generative music model to the specific artistic
+                identity of the project. Through a combination of textual prompts, audio references and
+                shared musical constraints, we directed Magenta RT towards a coherent ambient, electronic
+                and acousmatic sound world while preserving variation between individual interactions.
+                Another important achievement was using a meaningful translation of emotional information
+                across different media. The detected emotions do not correspond to a single predefined
+                output: instead, their relative strengths influence musical prompts, colour palettes, particle
+                behaviour and the overall visual energy of the experience.
+                We are particularly proud of having created an audiovisual environment that remains
+                aesthetically coherent while responding dynamically to different forms of external input.
+                Emotional data determines the slower and broader evolution of the experience, while
+                real-time audio analysis produces immediate changes in particle motion and visual
+                behaviour.
+                Finally, we integrated emotion detection, generative music, audio streaming and responsive
+                visuals into a complete real-time interactive pipeline, transforming a private written thought
+                into a temporary and personalised audiovisual experience.</p>
+
+              <h4>Lessons learned</h4>
+                <p>One of the main lessons we learned was the importance of balancing model performance
+                with computational sustainability. The most powerful model is not necessarily the most
+                suitable one for an interactive installation: it must also be efficient enough to operate reliably
+                within the available hardware, software environment and real-time constraints. This led us to
+                evaluate each model not only in terms of output quality, but also in terms of latency, resource
+                consumption and ease of integration.
+                We also learned that scientific research can significantly improve the quality and credibility of
+                an artistic and technical project. Consulting academic literature helped us make more
+                informed decisions when translating emotions into sound, colour and movement. Rather
+                than relying exclusively on subjective associations, we based part of the audiovisual
+                mapping on established findings related to emotional valence, arousal and
+                psychophysiological perception.
+                More broadly, the project showed us that a convincing interactive experience emerges from
+                the combination of creative intuition and evidence-based design. Artistic choices remain
+                essential, but they become more coherent and defensible when they are supported by
+                research, testing and technical feasibility.</p>
+
+              <br><h3>Technology</h3>
+              Processing / Java,
+              Processing Sound library,
+              Python,
+              Magenta RT,
+              GoEmotions,
+              RoBERTa,
+              PyTorch,
+              JAX,
+              CUDA,
+              Gradio,
+              Open Sound Control — OSC,
+              WebSocket,
+              Web Audio API,
+              AudioWorklet,
+              Lightning AI,
+              FFT audio analysis,
+              Amplitude tracking,
+              Transient detection,
+              Particle systems,
+              Chladni patterns,
+              Perlin noise,
+              Finite-state machines,
+              Real-time audio streaming,
+              BlackHole / VB-Audio Virtual Cable,
+              <br><h3>Students</h3>
+                <p><b>Luca Trapella</b>: conceived the core idea and overall concept of Cathartic, shaping the
+                  project’s artistic and interactive direction. He researched the AI models used for emotion
+                  detection and worked on the deployment and real-time parameter control of Magenta RT on
+                  Lightning AI, as well as audio streaming and virtual audio routing. He also contributed to the
+                  physics and initial audio reactivity of the particle system.<br>
+                <b>Anna Impembo</b>: esigned and developed the visual component of the project, integrating
+                  the particle system with emotion and audio data. She refined the Chladni-inspired motion,
+                  colour behaviour, visual dynamics and overall aesthetics.<br>
+                <b>Giorgio Mattina</b>: implemented the real-time generative music system and developed the
+                  communication infrastructure connecting the different components of the project. His work
+                  included OSC and WebSocket communication, prompt transmission to the remote model,
+                  and real-time audio streaming through WebSocket.<br>
+                <b>Francesco Saverio Nisoli</b>: researched artificial intelligence models for generative music and
+                  worked on prompt engineering. He designed the emotion-to-music mapping, defining and
+                  refining the textual and audio prompts used to condition Magenta RT, including the neutral
+                  state, the main emotional reference prompts, and the shared musical style constraints.<br>
+              </p>
+
+              <br><h3>Media</h3>
+              <style>.embed-container { clear:both; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+                     .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+              </style><div class='embed-container'><iframe width="560" height="315" src="https://www.youtube.com/embed/C3fJ4t9zZtw?si=Iju66z4wKVpoEuz3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../../assets/vendor/aos/aos.js"></script>
+  <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../../assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Hypnagogia</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../../assets/img/favicon.png" rel="icon">
+  <link href="../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.9.2
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="thumb.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="Picture3.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Hypnagogia</h3>
+              <p>Hypnagogia is a real-time 3D interactive installation that transforms a spoken dream narrative
+                into an immersive audio-visual experience inside an oniric living room, where emotion-driven
+                particle systems and spatialized binaural sound synthesis react to the dreamer’s words.</p>
+              <ul>
+                <li><strong>A.A. Year</strong>: 2025-26
+                <li><strong>Students</strong>
+                  <p>Bianco Lorenzo<br>
+                  Callandrone Pietro<br>
+                  De Lellis Flavio</p>
+                <li><strong>Source code</strong>: <a href="https://github.com/flaviodelellis/Hypnagogia">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <h3>Description</h3>
+              <p>Hypnagogia is an interactive audio-visual installation that invites the user to step into the
+              liminal space between wakefulness and sleep, the hypnagogic state.
+              The user enters a fully navigable 3D Victorian living room in first-person rendered in open-
+              Frameworks. A golden gramophone sits in the corner and an enchanted book rests on the main
+              table. The user picks up the book and types (or dictates via speech-to-text by clicking a but-
+              ton) a description of a dream they have had. Once submitted, the text is sent to a Python
+              bridge that runs a transformer-based emotion classifier and outputs seven normalized scores
+              (joy, sadness, anger, fear, disgust, surprise and neutrality). Those scores are streamed over OSC
+              to both the C++ visual system and a SuperCollider audio engine, creating a shared emotional
+              control layer that keeps image and sound synchronized with low latency. Visually, the front
+              wall becomes a reactive surface where a GPU particle system adjusts gravity, turbulence, flow
+              speed and color palette to the detected emotions, turning affect into motion and light. Soni-
+              cally, SuperCollider generates a continuously evolving composition that crossfades sample layers,
+              applies emotion-driven effects (pitch gravity, tremolo, granular flutter, bit-crushing and stutter)
+              and performs binaural spatialization so the sound seems anchored to the gramophone and shifts
+              with the listener’s position and orientation. The system relies on openFrameworks features (3D
+              rendering, camera, collision, model loading via ofxAssimpModelLoader), OSC messages (ofxOsc
+              and python-osc), GLSL and FBO ping-pong for particle simulation and custom binaural tech-
+              niques (interaural time/level differences, head-shadow filtering, pinna/elevation cues, distance
+              attenuation). Conceptually, the project explores the hypnagogic threshold between wakefulness
+              and sleep by treating a dream as a living signal that can be analyzed, mapped and re-expressed
+              as space, motion and sound. Interactable objects include the start button for voice input, the
+              dream book for typing, the gramophone for music playback, the piano for performance, the sofa
+              and Victorian chair for sitting, the bookshelf/Dream Archive for browsing saved dreams, the cat
+              for a meow, the medicine/pill bottle for resetting the experience and the large clock that reveals
+              the current time when targeted.
+              The aim of the project is not to represent dreams in a literal or narrative sense, but to allow
+              the user to re-experience the sensations associated with them. While fragments of dreams are
+              often remembered as images or events, the emotional atmosphere in which they were lived tends
+              to fade more quickly. Hypnagogia therefore focuses on reconstructing the affective dimension
+              of dreaming, translating the emotional residue of a dream into immersive audiovisual stimuli so
+              that the user can inhabit, once again, the feelings that may have accompanied that nocturnal
+              moment.</p>
+
+              <br><h3>Challenges, accomplishment and lessons learned </h3>
+              <h4>Challenges</h4>
+                <p>Converting the abstract emotional states into logical visual and aural behaviors was the project’s
+                most difficult task. The goal was to accurately capture the qualitative nature of each emotional
+                state using particles and music, rather than just mapping numerical emotion values to param-
+                eters. In order to achieve this, it was necessary to create particle dynamics that could percep-
+                tually convey tension, lightness, turbulence, or stillness while also creating a music engine that
+                was adaptable enough to capture minute emotional details without becoming disorganized or
+                monotonous. In order to maintain an overall aesthetic unity, each emotion had to affect several
+                layers of the system, including movement, color, density, harmony, timbre and spatial perception.
+                The room’s design was equally important. The environment had to serve as the most appropriate
+                spatial and atmospheric context for the project’s goal, not just a container for visual effects. The
+                Victorian living room was thoughtfully designed to encourage closeness, reflection and story
+                immersion. Its lighting, materials, scale and spatial arrangement were all constantly improved to
+                make the music and particles feel naturally integrated into the room rather than superimposed.
+                One of the main conceptual and implementation challenges was building a space that could
+                accommodate and magnify the emotional changes while still being technically sound in real
+                time.</p>
+              <h4>Accomplishments</h4>
+                <p>One of the main achievements was the effective use of closely related visual and aural responses
+                to depict dream emotions. Both the particle system and the generative music engine are powered
+                by emotion analysis, which results in noticeable changes to the particle behavior, color dynamics,
+                musical texture and spatialization that mirror the narrative’s identified affective profile. From
+                dream input to synchronized audio-visual feedback, the entire pipeline functions with minimal
+                latency, maintaining immediacy and enhancing the perception of responsiveness.
+                The development of a completely navigable 3D room with a game-like degree of presence and
+                interaction was another noteworthy accomplishment. An experience that feels more like a co-
+                hesive, livable space than a merely demonstrative prototype is produced by the environment’s
+                integration of various interactive elements and support for real-time first-person exploration.
+              <h4>Lessons Learned</h4>
+                <p>For complex creative systems, Open Sound Control (OSC) has shown itself to be a useful inte-
+                gration layer. Iteration speed was increased, component coupling was decreased and independent
+                development and testing were made possible by keeping emotion analysis, audio synthesis and
+                visual rendering distinct processes.
+                Both the expressive possibilities and the real-world difficulties of shader-driven workflows were
+                brought to light by GPU-based particle systems. In contrast to CPU-based code, where inspec-
+                tion tools are scarce and failures might go undetected, the ping-pong FBO technique provided
+                an effective and scalable method for real-time simulation, but it also necessitated a different
+                approach to debugging.
+                Binaural spatialization highlighted the value of perceptual cues over rigorous physical accuracy
+                in audio. The perceived realism of space was enhanced by head-shadow filtering, interaural time
+                differences and interaural level differences more so than by traditional stereo panning alone.
+                Lastly, inherent ambiguity was introduced by emotion analysis. Designing audio-visual mappings
+                that are stable, expressive and aesthetically coherent even when confronted with unexpected or
+                mixed emotion vectors is crucial because model outputs don’t always match human interpreta-
+                tion.</p>
+
+              <br><h3>Technology</h3>
+              <ul>
+                <li><b>C++ / openFrameworks</b> - 3D rendering, scene management, first-person camera, collision
+                detection
+                <li><b>GLSL shader</b>s - GPU ping-pong particle system (vertex + fragment)
+                <li><b>ofxAssimpModelLoader</b> - loading and animating .glb 3D models
+                <li><b>ofxOsc</b> - Open Sound Control messaging between all components
+                <li><b>ofxFastParticleSystem</b> - GPU-accelerated particle framework
+                <li><b>SuperCollider (sclang + scsynth)</b> - generative audio synthesis, emotion-reactive music
+                engine, binaural spatializer
+                <li><b>Python 3</b> - bridge for speech-to-text and emotion analysis
+                <li><b>Hugging Face Transformers</b> - NLP emotion classification model
+                <li><b>python-osc</b> - OSC communication from Python
+                <li><b>Binaural audio techniques</b> - ITD, ILD, head-shadow filtering, pinna/elevation modelling,
+                distance attenuation
+                <li><b>OpenGL</b> - depth testing, FBO render targets, custom shaders
+              </ul>
+
+              <br><h3>Students</h3>
+                <p><b>Bianco Lorenzo</b>: Graphics: conceived and built the oniric room environment, defined its visual identity and atmosphere and implemented all lighting and materials.<br>
+                <b>Callandrone Pietro</b>: Audio: designed and implemented the generative emotion-reactive music engine, the basic room functionalities and communication between all modules.<br>
+                <b>De Lellis Flavio</b>: Particle system: developed the GPU-based wall particle system,the emotion-to-simulation mapping and the Python OSC bridge..<br>
+              </p>
+
+              <br><h3>Media</h3>
+              <style>.embed-container { clear:both; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+                     .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+              </style><div class='embed-container'><iframe width="560" height="315" src="https://www.youtube.com/embed/sgJPdlN6CGs?si=3fqzXTt399gV7Fz-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../../assets/vendor/aos/aos.js"></script>
+  <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../../assets/js/main.js"></script>
+
+</body>
+
+</html>
